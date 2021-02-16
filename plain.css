@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #666666;
+  transition: all 250ms ease-in-out;
+}
+a:hover {
+  color: #333333;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #e6e6e6;
+  z-index: 1;
+}
+section {
+  width: 100%;
+  height: 80vh;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #e6e6e6;
+}
+.logo {
+  font-size: 30px;
+  flex: 1;
+}
+.logo:hover {
+  transform: scaleZ(3);
+}
+
+ul {
+  flex: 2;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ul a {
+  font-size: 20px;
+}
+.container .hero {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero h1 {
+  z-index: 99;
+  font-size: 100px;
+  color: #e6e6e6;
+  text-transform: uppercase;
+}
+
+.after-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.after-hero .left {
+  padding: 20px;
+  flex: 1;
+}
+.after-hero .right {
+  padding: 20px;
+  flex: 1;
+}
+
+.plain-text {
+  width: 100%;
+  height: 100%;
+}
+.plain-text h2 {
+  font-size: 40px;
+}
+.plain-text a {
+  color: #191919;
+  padding: 15px;
+  background-color: #999999;
+}
+.plain-text a:hover {
+  box-shadow: 5px 6px 15px #19191970;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.right img {
+  width: 100%;
+  bottom: -150px;
+  position: absolute;
+  filter: drop-shadow(0 0 0.75rem #b3b3b3);
+  transition: all 300ms ease-in;
+  animation: moon-anime 5s infinite;
+}
+
+.right img:hover {
+  filter: drop-shadow(0 0 50px #d8d8d8);
+}
+/*  */
+.after-moon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+  padding: 10px;
+}
+.after-moon img {
+  flex: 1;
+  height: 100%;
+  margin: -20px;
+  transform: scale(0.8);
+}
+
+footer {
+  background-color: #191919;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-text {
+  color: #d8d8d8;
+  font-size: 50px;
+}
+footer .footer-text h3 {
+  position: relative;
+}
+footer .footer-text h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 50%;
+  height: 2px;
+  border-bottom: 2px solid #d8d8d8;
+  transition: all 400ms ease-in;
+}
+footer .footer-text h3:hover::after {
+  width: 100%;
+}
+
+@keyframes moon-anime {
+  0% {
+    bottom: -150px;
+  }
+  50% {
+    bottom: -120px;
+  }
+  100% {
+    bottom: -150px;
+  }
+}
